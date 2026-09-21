@@ -1,0 +1,41 @@
+[project]
+name = "jev-agent"
+version = "0.1.0"
+description = "A computer-use agent whose control loop is decided by Typesafe Jev, with an LLM confined to generator roles."
+requires-python = ">=3.11"
+dependencies = [
+    "httpx>=0.27",
+    "pydantic>=2.7",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+# The LLM layer. Separate so the Jev core installs and tests without it.
+llm = ["openai>=1.40"]
+# The browser surface. Chromium is preinstalled; never run `playwright install`.
+browser = ["playwright>=1.44"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.2",
+    "pytest-asyncio>=0.23",
+]
+
+[project.scripts]
+agent = "agent.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/agent"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "live: hits real APIs, costs money, deselected by default",
+]
+# Offline by default. The live suite opts in with `-m live`.
+addopts = "-m 'not live'"
+asyncio_mode = "auto"
