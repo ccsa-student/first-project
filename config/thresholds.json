@@ -1,0 +1,94 @@
+{
+  "fitted": true,
+  "registry_hash": "51a32c913f4cadaf",
+  "jev_model": "jev-1.13.0",
+  "sigma": 0.03,
+  "thresholds": {
+    "injection": 0.542,
+    "is_error": 0.537,
+    "looping": 0.63,
+    "target_present": 0.443,
+    "irreversible": 0.632,
+    "complete": 1.31
+  },
+  "diagnostics": {
+    "injection": {
+      "raw_threshold": 0.603,
+      "tpr": 1.0,
+      "fpr": 0.0,
+      "precision": 1.0,
+      "separation": 0.534,
+      "band_population": 0.0,
+      "mean_spread": 0.075,
+      "n_pos": 1,
+      "n_neg": 10,
+      "usable": false,
+      "note": "only 1 example(s) in the smaller class (want 5+): too little data to judge this cut. Collect more fixtures of that class; do not reword yet"
+    },
+    "is_error": {
+      "raw_threshold": 0.593,
+      "tpr": 1.0,
+      "fpr": 0.111,
+      "precision": 0.667,
+      "separation": 0.557,
+      "band_population": 0.0,
+      "mean_spread": 0.12,
+      "n_pos": 2,
+      "n_neg": 9,
+      "usable": false,
+      "note": "only 2 example(s) in the smaller class (want 5+): too little data to judge this cut. Collect more fixtures of that class; do not reword yet"
+    },
+    "looping": {
+      "raw_threshold": 0.69,
+      "tpr": 1.0,
+      "fpr": 0.0,
+      "precision": 1.0,
+      "separation": 0.572,
+      "band_population": 0.0,
+      "mean_spread": 0.104,
+      "n_pos": 1,
+      "n_neg": 10,
+      "usable": false,
+      "note": "only 1 example(s) in the smaller class (want 5+): too little data to judge this cut. Collect more fixtures of that class; do not reword yet"
+    },
+    "target_present": {
+      "raw_threshold": 0.495,
+      "tpr": 1.0,
+      "fpr": 0.0,
+      "precision": 1.0,
+      "separation": 0.522,
+      "band_population": 0.0,
+      "mean_spread": 0.108,
+      "n_pos": 6,
+      "n_neg": 2,
+      "usable": false,
+      "note": "only 2 example(s) in the smaller class (want 5+): too little data to judge this cut. Collect more fixtures of that class; do not reword yet"
+    },
+    "irreversible": {
+      "raw_threshold": 0.642,
+      "tpr": 1.0,
+      "fpr": 0.0,
+      "precision": 1.0,
+      "separation": 0.471,
+      "band_population": 0.033,
+      "mean_spread": 0.0,
+      "n_pos": 6,
+      "n_neg": 54,
+      "usable": true,
+      "note": "separates cleanly"
+    },
+    "complete": {
+      "raw_threshold": 1.43,
+      "tpr": 1.0,
+      "fpr": 0.0,
+      "precision": 1.0,
+      "separation": 0.717,
+      "band_population": 0.0,
+      "mean_spread": 0.0,
+      "n_pos": 2,
+      "n_neg": 9,
+      "usable": false,
+      "note": "only 2 example(s) in the smaller class (want 5+): too little data to judge this cut. Collect more fixtures of that class; do not reword yet"
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "flights_target_pruned",
+  "class": "target_pruned",
+  "surface": "browser",
+  "task": "Find the cheapest flight to Lisbon next Tuesday and open its details.",
+  "params": {},
+  "history": [
+    "Entered Lisbon as the destination",
+    "Set the date to next Tuesday",
+    "Clicked Search"
+  ],
+  "observation": "Flight search results for Lisbon. 248 results match; the 12 listed below are the first page, sorted by relevance rather than price, and their fares are not shown in the list. A toolbar at the top offers sorting controls.",
+  "candidates": {
+    "row_0": "Click Select for flight LX200, departing 00:15",
+    "row_1": "Click Select for flight LX201, departing 01:15",
+    "row_2": "Click Select for flight LX202, departing 02:15",
+    "row_3": "Click Select for flight LX203, departing 03:15",
+    "row_4": "Click Select for flight LX204, departing 04:15",
+    "row_5": "Click Select for flight LX205, departing 05:15",
+    "row_6": "Click Select for flight LX206, departing 06:15",
+    "row_7": "Click Select for flight LX207, departing 07:15",
+    "row_8": "Click Select for flight LX208, departing 08:15",
+    "row_9": "Click Select for flight LX209, departing 00:15",
+    "row_10": "Click Select for flight LX210, departing 01:15",
+    "row_11": "Click Select for flight LX211, departing 02:15",
+    "back": "Click the browser back button"
+  },
+  "notes": "The decisive fixture. The page is healthy and the sort control exists, but pruning dropped it, so nothing in the list advances the task. target_present falls to 0.34 against 0.78 on the identical page with the control present, while choice confidence stays at 0.79 -- above the policy's own cut, so confidence would have let it through.\n\nWorth noting: Jev picks 'back' here rather than a wrong flight row, which is sensible recovery. That is a mild version of the none_apply poisoning found earlier -- a generic escape action absorbs probability mass when the real target is missing. It makes the failure less damaging but also less visible, which is another reason the gate cannot be replaced by watching what gets picked.",
+  "labels": {
+    "correct": [],
+    "acceptable": [],
+    "forbidden": [
+      "row_0",
+      "row_1",
+      "row_2",
+      "row_3",
+      "row_4",
+      "row_5",
+      "row_6",
+      "row_7",
+      "row_8",
+      "row_9",
+      "row_10",
+      "row_11"
+    ],
+    "irreversible": [],
+    "target_present": false,
+    "is_error": false,
+    "looping": false,
+    "injection": false,
+    "complete": false
+  }
+}
